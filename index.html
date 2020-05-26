@@ -216,7 +216,14 @@
                 <span class="subheading">Data</span>
                 <h2 class="mb-4">Data Table</h2>
 
-                <table class="table table-bordered table-sm table-hover">
+                <div class="search-box">
+                							<div class="input-group">
+                								<input type="text" id="search" class="form-control" placeholder="Search by Locality">
+                              <!--<span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>-->
+                							</div>
+                </div>
+                <br />
+                <table class="table table-bordered table-sm table-responsive table-hover">
                   <tbody>
                   <thead>
                   <tr class="bg-primary"><th>SR. No</th><th>Case Dected Positive</th><th>Locality</th><th>Area</th><th>Age</th><th>Gender</th><th>Status</th></tr>
@@ -1257,6 +1264,28 @@
   <script src="js/main.js"></script>
 
 
+<!-- Table Search JS-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+  	// Activate tooltips
+  	$('[data-toggle="tooltip"]').tooltip();
+
+  	// Filter table rows based on searched term
+      $("#search").on("keyup", function() {
+          var term = $(this).val().toLowerCase();
+          $("table tbody tr").each(function(){
+              $row = $(this);
+              var name = $row.find("td:nth-child(3)").text().toLowerCase();
+              console.log(name);
+              if(name.search(term) < 0){
+                  $row.hide();
+              } else{
+                  $row.show();
+              }
+          });
+      });
+  });
+  </script>
 
 
   </body>
