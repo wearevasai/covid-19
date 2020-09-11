@@ -11451,7 +11451,9 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyleft &copy; <script>document.write(new Date().getFullYear());</script> <i class="icon-heart color-danger" aria-hidden="true"></i> Proudly made by the people of Vasai-Virar  | Last Update: <span id="demo"></span>
+            <span>Copyleft &copy; <script>document.write(new Date().getFullYear());</script> <i class="icon-heart color-danger" aria-hidden="true"></i>
+               Proudly made by the people of Vasai-Virar  | Last Update: <span id="demo"></span>
+               <br /><br /><span id="loadtime"></span>
             </span>
           </div>
         </div>
@@ -11498,6 +11500,18 @@
 
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+
+  <script type="text/javascript">
+       var before_loadtime = new Date().getTime();
+       window.onload = Pageloadtime;
+       function Pageloadtime() {
+           var aftr_loadtime = new Date().getTime();
+           // Time calculating in seconds
+           pgloadtime = (aftr_loadtime - before_loadtime) / 1000
+
+           document.getElementById("loadtime").innerHTML = "Page loaded in <font color='red'><b>" + pgloadtime + "</b></font> Seconds";
+       }
+  </script>
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
