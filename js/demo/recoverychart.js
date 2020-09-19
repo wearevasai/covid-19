@@ -28,13 +28,13 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-var ctx = document.getElementById("myAreaChart");
+var ctx = document.getElementById("recoveryChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
     datasets: [{
-      label: "Cases",
+      label: "Recoveries",
       lineTension: 0.3,
       backgroundColor: "rgba(78, 115, 223, 0.05)",
       borderColor: "rgba(78, 115, 223, 1)",
@@ -46,7 +46,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [7, 127, 633, 3392, 6956, 4762, 4192],
+      data: [0, 45, 211, 1631, 6288, 6894, 3672],
     }],
   },
   options: {
