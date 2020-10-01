@@ -32,7 +32,7 @@ var ctx = document.getElementById("recoveryChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+    labels: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
     datasets: [{
       label: "Recoveries",
       lineTension: 0.3,
@@ -46,7 +46,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 45, 211, 1631, 6288, 6894, 5856],
+      data: [0, 45, 211, 1631, 6288, 6894, 5856, 226],
     }],
   },
   options: {
