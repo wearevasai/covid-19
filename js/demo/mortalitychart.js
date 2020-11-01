@@ -32,7 +32,7 @@ var ctx = document.getElementById("mortalityChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct"],
+    labels: ["Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"],
     datasets: [{
       label: "Deaths",
       lineTension: 0.3,
@@ -46,7 +46,7 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 14, 17, 91, 129, 141, 82, 150],
+      data: [0, 14, 17, 91, 129, 141, 82, 152, 3],
     }],
   },
   options: {
